@@ -1,0 +1,99 @@
+////蓝色
+//$font-color: #ffffff;
+//$font-color-theme: #2977c7;
+//$menu-border-color: #0cd2ff;
+//$menu-hover: #ecf5ff;//菜单悬停的背景颜色
+//$operation-background:#409eff26;//操作框的背景色
+//$operation-border:#409eff6b;//操作框的背景边框
+//$check-box-color:#409EFF;//复选框颜色
+//$tree-father-node-color:#145ba7;//树结构父节点字体颜色
+
+
+//红色
+$font-color: #ffffff;
+$font-color-theme: #d83b51;
+$menu-border-color: #ff4861;
+$menu-hover: #fff6e394; //菜单悬停的背景颜色
+$operation-background: #ff40400f; //操作框的背景色
+$operation-border: #ff9d9d6b; //操作框的背景边框
+$check-box-color: #d83b51; //复选框颜色
+$tree-father-node-color: #a20909; //树结构父节点字体颜色
+
+
+//自定义按钮颜色
+.el-button--custom {
+  color: $font-color !important;
+  background-color: $font-color-theme !important;
+  border-color: $font-color-theme !important;
+}
+
+.el-button--custom:hover {
+  background-color: $menu-border-color !important;
+  border-color: $menu-border-color !important;
+}
+
+.el-button--custom:focus {
+  background-color: $menu-border-color !important;
+  border-color: $menu-border-color !important;
+}
+
+//自定义text按钮颜色
+.customText {
+  color: $font-color-theme !important;
+  border-color: transparent;
+  background: 0 0;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.customText:hover {
+  color: $menu-border-color !important;
+}
+
+.customText:focus {
+  color: $menu-border-color !important;
+}
+
+//自定义checkbox样式
+.el-checkbox__input.is-checked .el-checkbox__inner, .el-checkbox__input.is-indeterminate .el-checkbox__inner {
+  background-color: $check-box-color !important;
+  border-color: $check-box-color !important;
+}
+
+.el-checkbox__input.is-checked + .el-checkbox__label {
+  color: $check-box-color !important;
+}
+
+.el-checkbox.is-bordered.is-checked {
+  border-color: $check-box-color !important;
+}
+
+.el-checkbox__input.is-focus .el-checkbox__inner {
+  border-color: $check-box-color !important;
+}
+
+//自定义dropdown悬浮时的颜色
+.el-dropdown-menu__item:focus, .el-dropdown-menu__item:not(.is-disabled):hover {
+  background-color: $operation-background;
+  color: $font-color-theme;
+}
+
+//自定义分页颜色
+.el-pagination.is-background .el-pager li:not(.disabled).active {
+  background-color: $font-color-theme !important;
+}
+
+//自定义tab切换页样式
+
+.el-tabs__item.is-active {
+  color: $font-color-theme !important;
+  font-weight: bold;
+}
+
+.el-tabs__item:hover {
+  color: $menu-border-color !important;
+}
+
+.el-tabs__active-bar {
+  background-color: $font-color-theme !important;
+}

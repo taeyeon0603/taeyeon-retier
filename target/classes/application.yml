@@ -1,0 +1,119 @@
+spring:
+  profiles:
+    active: dev
+  servlet:
+    multipart:
+      max-file-size: 200MB
+      max-request-size: 200MB
+  mvc:
+    static-path-pattern: /static/**
+    view:
+      prefix: /WEB-INF/view
+  resources:
+    static-locations: classpath:/static/
+  http:
+    converters:
+      preferred-json-mapper: fastjson
+  devtools:
+    restart:
+      enabled: false
+      additional-paths: src/main/java
+      exclude: static/**,WEB-INF/view/**
+  aop:
+    proxy-target-class: true
+  jms:
+    pub-sub-domain: true
+  thymeleaf:
+    prefix: classpath:/templates/
+  #  session:
+  #    store-type: redis # Session store type
+  config:
+    import: "optional:file:./log.xml"
+
+pagehelper:
+  reasonable: true
+  support-methods-arguments: true
+  params: count=countSql
+  auto-runtime-dialect: true
+
+headersToTry: X-Forwarded-For,Proxy-Client-IP,WL-Proxy_Client-IP,HTTP_X_FORWARDED_FOR,HTTP_X_FORWARDED,HTTP_X_CLUSTER_CLIENT_IP,HTTP_CLIENT_IP,HTTP_FORWARDED_FOR,HTTP_FORWARDED,HTTP_VIA,REMOTE_ADDR,X-Real-IP
+
+wzs-lc-ip: 127.0.0.1,0:0:0:0:0:0:0:1
+
+shiro:
+  sessionExpired: 21600000
+---
+
+##########################################################
+###################  ����������profile  ###################
+##########################################################
+spring:
+  profiles: dev
+  redis:
+    host: localhost
+    port: 6379
+    password: 
+    timeout: 3000
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    master:
+      jdbc-url: jdbc:mysql://localhost:3306/txry?autoReconnect=true&useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=false
+      driver-class-name: com.mysql.jdbc.Driver
+      type: com.alibaba.druid.pool.DruidDataSource
+      username: root
+      password: 123456
+      filters: log4j,mergeStat
+      initialize: false
+      name: mysql
+#    second:
+#      jdbc-url: jdbc:sqlserver://localhost:1433;DatabaseName=Police_Basic_Info;integratedSecurity=false;SelectMethod=cursor;
+#      driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+#      type: com.alibaba.druid.pool.DruidDataSource
+#      username: sa
+#      password: 123456
+#      filters: log4j,mergeStat
+#      initialize: false
+#      name: sqlserver
+  jpa:
+    primary:
+      open-in-view: true
+#      show-sql: true
+      database-platform: org.hibernate.dialect.MySQL5Dialect
+      hibernate:
+        ddl-auto: update
+        naming:
+          physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+#    second:
+#      open-in-view: true
+#      show-sql: true
+#      database-platform: org.hibernate.dialect.SQLServer2008Dialect
+#      hibernate:
+#        default_catalog: Police_Basic_Info
+#        naming:
+#          physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+swagger:
+  enable: true
+
+pic:
+  path: uploadPic/
+  url: http://127.0.0.1:8076/uploadPic/
+workFile:
+  path: uploadPic/
+  url: http://127.0.0.1:8076/uploadPic/
+#retire:
+#  importTemplate:
+#    url: http://127.0.0.1:8076/uploadPic/test.xlsx
+
+server:
+  port: 8086
+  tomcat:
+    basedir: temp
+
+#logging:
+#  config: src/main/resources/log.xml
+logging:
+  level:
+    org:
+      apache:
+        shiro: error
+

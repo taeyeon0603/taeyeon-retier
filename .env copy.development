@@ -1,0 +1,8 @@
+VUE_APP_ENV_FIELD=".env.dev"
+VUE_APP_BASE_URL="http://41.218.0.89:8889/api"
+VUE_APP_DOWNLOAD_URL="http://41.215.12.108:8076/uploadPic/test.xlsx"
+VUE_APP_WEBSOCKET_URL="ws://41.215.12.108:8080/conn"
+VUE_APP_IMAGE_URL="http://41.215.12.108:8080/img/app/"
+VUE_APP_UPLOAD_URL="http://41.215.12.108:8086/work/info/upload"
+VUE_APP_MOCK="false"
+VUE_APP_PROXY="false"

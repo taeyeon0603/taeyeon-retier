@@ -1,0 +1,49 @@
+{
+  "name": "lbb-ht",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build"
+  },
+  "dependencies": {
+    "@jiaminghi/data-view": "^2.10.0",
+    "@wangeditor/editor": "^5.0.1",
+    "@wangeditor/editor-for-vue": "^5.1.11",
+    "@wangeditor/plugin-upload-attachment": "^1.0.0",
+    "aos": "^2.3.4",
+    "axios": "^0.27.2",
+    "core-js": "^3.6.4",
+    "echarts": "^5.3.2",
+    "element-plus": "^1.0.2-beta.52",
+    "file-saver": "^2.0.5",
+    "font-awesome": "^4.7.0",
+    "js-table2excel": "^1.0.3",
+    "mitt": "^2.1.0",
+    "moment": "^2.29.1",
+    "nprogress": "^0.2.0",
+    "print-js": "^1.6.0", 
+    "vue": "^3.0.0",
+    "vue-router": "^4.0.0-0",
+    "vue3-seamless-scroll": "^2.0.1",
+    "vuex": "^4.0.0-0",
+    "xlsx": "^0.18.3",
+    "swiper": "^6.5.6"
+  },
+  "devDependencies": {
+    "@babel/plugin-syntax-dynamic-import": "^7.8.3",
+    "@vue/cli-plugin-router": "^5.0.4",
+    "@vue/cli-plugin-vuex": "^5.0.4",
+    "@vue/cli-service": "^5.0.4",
+    "@vue/compiler-sfc": "^3.0.0",
+    "mockjs": "^1.1.0",
+    "sass": "^1.26.5",
+    "sass-loader": "^8.0.2",
+    "script-loader": "^0.7.2"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
+}
