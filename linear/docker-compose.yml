@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  task:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./src:/app/src
+    env_file:
+      - .env
+    command: ["python", "task.py"]

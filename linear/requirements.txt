@@ -1,0 +1,10 @@
+pandas
+numpy
+pyodbc
+scikit-learn
+sqlalchemy
+schedule
+joblib
+pyodbc
+python-dotenv
+mysql-connector-python
